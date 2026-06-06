@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RANJAN – THE ADVOCATE | Official Website</title>
+<meta name="description" content="Prashanth in and as Ranjan – The Advocate. A hard-hitting legal thriller. Justice Has A New Voice. 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">RANJAN</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  <div class="loader-text">Loading Experience</div>
+</div>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">RANJAN</a>
+  <ul class="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#cast">Cast</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#trailer">Trailer</a></li>
+  </ul>
+  <div class="nav-ctas">
+    <a href="#trailer" class="btn-ghost">Watch Trailer</a>
+    <a href="#" class="btn-gold">Book Tickets</a>
+  </div>
+ <button type="button" class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+</nav>
+
+<!-- Hero -->
+<section id="hero">
+<!-- Background video (placeholder using a cinematic gradient animation) -->
+<div id="hero-video" style="
+  position:absolute;inset:0;z-index:0;
+  background: linear-gradient(135deg, #0a0600 0%, #1a1000 20%, #050300 40%, #0f0900 60%, #1a0f00 80%, #080400 100%);
+  animation: bgPan 20s ease infinite alternate;"></div>
+
+<!-- Background Video -->
+<video id="hero-video" autoplay muted loop playsinline>
+    <source src="assets/videos/Ranjan-Bg.mp4" type="video/mp4">
+</video>
+<!-- Mobile Background Image -->
+<div id="hero-mobile-bg"></div>
+
+  <style>
+    @keyframes bgPan {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+  </style>
+
+  <!-- Cinematic overlay -->
+  <div class="hero-overlay"></div>
+  <!-- Grain -->
+  <div class="grain"></div>
+  <!-- Particles -->
+  <div id="particles"></div>
+
+
+  <!-- Hero Content -->
+  <div class="hero-content" id="heroContent">
+    <p class="hero-eyebrow">✦ Prashanth In &amp; As ✦</p>
+    <h1 class="hero-title">
+      RANJAN
+      <span class="subtitle-word">The Advocate</span>
+    </h1>
+    <div class="gold-divider"></div>
+    <p class="hero-tagline">"Justice Has A New Voice"</p>
+  
+    <div class="hero-ctas">
+     
+      
+      <a href="#about"
+   style="background:none;
+   border:1px solid rgba(212,175,55,0.3);
+   color:var(--muted);
+   padding:.75rem 1.4rem;
+   font-size:.72rem;
+   letter-spacing:.2em;
+   text-transform:uppercase;
+   text-decoration:none;
+   display:inline-block;
+   font-family:'Montserrat',sans-serif;
+   transition:all .3s;"
+   onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'"
+   onmouseout="this.style.borderColor='rgba(212,175,55,0.3)';this.style.color='var(--muted)'">
+   Movie Details
+</a>
+    </div>
+  </div>
+
+  <!-- Info button -->
+  <button class="info-btn" onclick="openOverlay()" title="Movie Details">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16" stroke-width="2"/></svg>
+    <span>Info</span>
+  </button>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-ind">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- Movie Details Overlay -->
+<div id="overlay-panel" role="dialog" aria-modal="true" aria-label="Movie Details">
+  <div class="overlay-backdrop" onclick="closeOverlay()"></div>
+  <div class="overlay-glass">
+    <button class="overlay-close" onclick="closeOverlay()" aria-label="Close">✕</button>
+    <div class="overlay-inner">
+      <div class="overlay-grid">
+
+        <!-- LEFT: About -->
+        <div>
+          <p class="overlay-col-title">About The Movie</p>
+          <p class="about-desc">
+  "Ranjan is a gripping courtroom drama and legal thriller that follows a respected advocate's relentless pursuit of justice. When a controversial case uncovers corruption, abuse of power, and hidden agendas, Ranjan enters a high-stakes legal battle where every argument, revelation, and verdict could change lives forever."
+</p>
+          <ul class="info-list">
+            <li>
+              <span class="info-icon">◈</span>
+              <span class="lbl">Genre</span>
+              Legal Thriller
+            </li>
+            <li>
+              <span class="info-icon">◈</span>
+              <span class="lbl">Language</span>
+              Tamil
+            </li>
+            <li>
+              <span class="info-icon">◈</span>
+              <span class="lbl">Release</span>
+              2026
+            </li>
+            <li>
+              <span class="info-icon">◈</span>
+              <span class="lbl">Duration</span>
+              2h 35m
+            </li>
+            <li>
+              <span class="info-icon">◈</span>
+              <span class="lbl">Certificate</span>
+              U/A
+            </li>
+            <li>
+              <span class="info-icon">◈</span>
+              <span class="lbl">Production</span>
+             Five Star Creations
+            </li>
+          </ul>
+        </div>
+
+        <!-- CENTER: Director -->
+        <div>
+          <p class="overlay-col-title">Directed By</p>
+          <div class="director-card">
+            <div class="director-avatar">
+    <img src="assets/images/thiagarajan.png" alt="Thiagarajan">
+</div>
+            <div class="director-name">THIAGARAJAN</div>
+            <div class="director-role">Director</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Cast Carousel -->
+   <!-- RIGHT: Cast Carousel -->
+    <div>
+  <p class="overlay-col-title">Technical Crew</p>
+
+  <div class="cast-carousel">
+    <div class="cast-track" id="castTrack">
+
+     <div class="cast-card">
+    <div class="cast-avatar">
+        <img src="assets/crew/gv-prakash.png" alt="G.V. Prakash Kumar">
+    </div>
+    <div class="cast-name">G.V. Prakash Kumar</div>
+    <div class="cast-role">Music Director</div>
+</div>
+
+<div class="cast-card">
+    <div class="cast-avatar">
+        <img src="assets/crew/ravi.png" alt="Cinematography">
+    </div>
+    <div class="cast-name">Ravi Yadav</div>
+    <div class="cast-role">Cinematography</div>
+</div>
+
+<div class="cast-card">
+    <div class="cast-avatar">
+        <img src="assets/crew/art-director.png" alt="Senthil Raghavan">
+    </div>
+    <div class="cast-name">Senthil Raghavan</div>
+    <div class="cast-role">Art Director</div>
+</div>
+<div class="cast-card">
+    <div class="cast-avatar">
+        <img src="assets/crew/kathiresan.png" alt="Producer">
+    </div>
+    <div class="cast-name">S. Kathiresan</div>
+    <div class="cast-role">Producer</div>
+</div>
+
+<div class="cast-card">
+    <div class="cast-avatar">
+        <img src="assets/crew/five-star.png" alt="Five Star Creations">
+    </div>
+    <div class="cast-name">Five Star Creations</div>
+    <div class="cast-role">Production House</div>
+</div>
+
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      </div>
+
+      <!-- Footer CTA -->
+      <div class="overlay-footer">
+        <button class="btn-lg-gold">Book Tickets</button>
+        <button class="btn-lg-ghost">Watch Trailer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section id="about" class="content-section">
+  <div class="about-grid">
+    <div class="about-text-block reveal">
+      <span class="section-label">The Story</span>
+      <h2 class="section-title">JUSTICE HAS A<br><span>NEW VOICE</span></h2>
+<p>
+  Ranjan is a gripping courtroom drama and legal thriller that follows the journey of a highly respected advocate known for his sharp legal mind and unwavering commitment to justice. When a controversial case exposes corruption, abuse of power, and the influence of powerful individuals, Ranjan steps into the courtroom to fight for the truth. As evidence unfolds and tensions rise, the battle becomes more than a legal case—it becomes a fight for justice itself.
+</p>      <div class="movie-stats">
+        <div class="stat-item">
+          <div class="stat-label">Directed By</div>
+          <div class="stat-val">Thiagarajan</div>
+        </div>
+        <div class="stat-item">
+           <div class="stat-label">Produced By</div>
+             <div class="stat-val">S. Kathiresan</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Music</div>
+           <div class="stat-val">G. V. Prakash Kumar</div>
+        </div>
+         <div class="stat-item">
+    <div class="stat-label">Production</div>
+    <div class="stat-val">Five Star Creations</div>
+  </div>
+      </div>
+    </div>
+  <div class="about-visual reveal">
+
+    <img src="assets/images/ranjan-poster.png"
+         alt="Ranjan The Advocate Poster"
+         class="about-poster">
+
+    <div class="about-visual-text">2026</div>
+
+    <div class="visual-badge">
+        Tamil · 2026
+    </div>
+
+</div>
+  </div>
+</section>
+
+
+<!-- Cast Section -->
+<section id="cast" class="content-section">
+  <span class="section-label reveal">The Ensemble</span>
+  <h2 class="section-title reveal">MEET THE <span>CAST</span></h2>
+
+  <div class="cast-full-grid">
+
+    <!-- Prashanth -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/prashanth.png" alt="Prashanth">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Prashanth</div>
+      <div class="cast-full-char">as Ranjan</div>
+    </div>
+
+    <!-- Iniya -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/iniya.png" alt="Iniya">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Iniya</div>
+      <div class="cast-full-char">Lead Role</div>
+    </div>
+
+    <!-- Sathyaraj -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/sathyaraj.png" alt="Sathyaraj">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Sathyaraj</div>
+      <div class="cast-full-char">as Judge</div>
+    </div>
+
+    <!-- Hari Kathiresan -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/hari-kathiresan.png" alt="Hari Kathiresan">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Hari Kathiresan</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+    <!-- Priyanka Rajakumaran -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/priyanka-rajakumaran.png" alt="Priyanka Rajakumaran">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Priyanka Rajakumaran</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+    <!-- R K Suresh -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/rk-suresh.png" alt="R K Suresh">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">R. K. Suresh</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+    <!-- Mime Gopi -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/mime-gopi.png" alt="Mime Gopi">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Mime Gopi</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+    <!-- Subramaniam Siva -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/subramaniam-siva.png" alt="Subramaniam Siva">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Subramaniam Siva</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+    <!-- Mohan Raman -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/mohan-raman.png" alt="Mohan Raman">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Mohan Raman</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+    <!-- Santhosh Prathap -->
+    <div class="cast-full-card reveal">
+      <div class="cast-full-avatar">
+        <img src="assets/cast/santhosh-prathap.png" alt="Santhosh Prathap">
+      </div>
+      <div class="cast-divider"></div>
+      <div class="cast-full-name">Santhosh Prathap</div>
+      <div class="cast-full-char">Supporting Role</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery" class="content-section">
+  <span class="section-label reveal">Behind The Scenes</span>
+  <h2 class="section-title reveal">FILM <span>GALLERY</span></h2>
+  <div class="gallery-grid reveal">
+    <div class="gallery-item">
+      <div class="gallery-item-inner">RANJAN</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-item-inner">2026</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-item-inner">LJ</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-item-inner">RA</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-item-inner">TB</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-item-inner">JV</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+    <div class="gallery-item">
+      <div class="gallery-item-inner">SA</div>
+      <div class="gallery-overlay-icon">✦</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="journey" class="content-section">
+
+<span class="section-label reveal">The Journey</span>
+
+  <h2 class="section-title reveal">
+    PRODUCTION <span>JOURNEY</span>
+  </h2>
+
+  <div class="timeline reveal">
+
+```
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2025</span>
+    <h3>Official Announcement</h3>
+    <p>The project was officially announced, marking the return of Prashanth in a powerful courtroom drama.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2026</span>
+    <h3>First Look Poster</h3>
+    <p>The first look poster of Ranjan – The Advocate was unveiled.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2026</span>
+    <h3>Cast Reveal</h3>
+    <p>The official cast and crew details were announced.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2026</span>
+    <h3>Teaser Launch</h3>
+    <p>The first glimpse of the courtroom thriller was released.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-dot"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2026</span>
+    <h3>Trailer Launch</h3>
+    <p>The official trailer introduced audiences to Ranjan's fight for justice.</p>
+  </div>
+</div>
+
+<div class="timeline-item">
+  <div class="timeline-dot active"></div>
+  <div class="timeline-content">
+    <span class="timeline-year">2026</span>
+    <h3>Worldwide Release</h3>
+    <p>Ranjan – The Advocate arrives in theatres worldwide.</p>
+  </div>
+</div>
+```
+
+  </div>
+
+</section>
+
+
+<!-- Trailer Section -->
+<section id="trailer" class="content-section" style="text-align:center;">
+  <span class="section-label reveal">Official Trailer</span>
+  <h2 class="section-title reveal">WATCH THE <span>TRAILER</span></h2>
+  <div class="trailer-wrap reveal">
+    <!-- Placeholder for trailer video -->
+    <div style="width:100%;height:100%;background:linear-gradient(135deg,#0d0a02,#1a1500,#0d0a02);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem;">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(212,175,55,0.15);letter-spacing:.05em;">TRAILER</div>
+      <div style="font-size:.65rem;letter-spacing:.3em;color:rgba(212,175,55,0.3);text-transform:uppercase;">Coming Soon</div>
+    </div>
+    <button class="play-btn" aria-label="Play Trailer">
+      <div class="play-circle">
+        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>
+      </div>
+    </button>
+    <div class="trailer-reflection"></div>
+  </div>
+  <div style="margin-top:3rem;display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;" class="reveal">
+    <a href="#" class="btn-gold" style="padding:1rem 2.5rem;font-size:.78rem;letter-spacing:.2em;">Book Tickets Now</a>
+    <a href="#" class="btn-ghost" style="padding:1rem 2.5rem;font-size:.78rem;letter-spacing:.2em;">Share Film</a>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+
+  <div class="footer-logo">
+    RANJAN · THE ADVOCATE
+  </div>
+
+  <div class="footer-tagline">
+    "Justice Has A Voice. His Name Is Ranjan."
+  </div>
+
+  <div class="footer-links">
+
+    <a href="#about">About</a>
+
+    <a href="#cast">Cast</a>
+
+    <a href="#gallery">Gallery</a>
+
+    <a href="#journey">Journey</a>
+
+    <a href="#trailer">Trailer</a>
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    © 2026 Ranjan – The Advocate • All Rights Reserved • Powered by Meg World Technologies
+  </div>
+
+</footer>
+
+<script src="script.js"></script>
+<script>
+function openOverlay() {
+    document.getElementById('overlay-panel').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeOverlay() {
+    document.getElementById('overlay-panel').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close with ESC key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeOverlay();
+    }
+});
+</script>
+</body>
+</html>
